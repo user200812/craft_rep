@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.datasource">java:/comp/env/jdbc/Craft</property>
+        <property name="hibernate.setup">true</property>
+        <property name="show_sql">true</property>
+        <!--
+        <property name="connection.url">jdbc:sqlserver://192.168.1.2\sqlexpress:1433;databaseName=kpsx7113_3</property>
+        <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="connection.pool_size">100</property>
+        <property name="connection.username">kpsx7113_3</property>
+        <property name="connection.password">123</property>
+        <property name="connection.username">kpsx7113_3</property>
+        <property name="connection.password">123</property>
+        <property name="hibernate.default_schema">kpsx7113_3</property>
+        <property name="connection.url">jdbc:sqlserver://192.168.1.2\sqlexpress:1433;databaseName=kpsx7113_3</property>
+        <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="hibernate.dialect">ru.craftautoweb.utils.SQlServerDBDialect</property>
+        -->
+        <property name="hibernate.current_session_context_class">thread</property>
+        <!--
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+        -->
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServer2008Dialect</property>
+        <mapping class="ru.craftautoweb.entities.UserEntity"/>
+        <mapping class="ru.craftautoweb.entities.AgencyEntity"/>
+        <mapping class="ru.craftautoweb.entities.AutoEntity"/>
+        <mapping class="ru.craftautoweb.entities.CompassEntity"/>
+        <mapping class="ru.craftautoweb.entities.DriverEntity"/>
+        <mapping class="ru.craftautoweb.entities.RouteEntity"/>
+        <mapping class="ru.craftautoweb.entities.TableEntity"/>
+        <mapping class="ru.craftautoweb.entities.VBillDriversEntity"/>
+        <mapping class="ru.craftautoweb.entities.VBillsEntity"/>
+        <mapping class="ru.craftautoweb.entities.ResultsEntity"/>
+        <mapping class="ru.craftautoweb.entities.VDocumentsEntity"/>
+        <mapping class="ru.craftautoweb.entities.RolesEntity"/>
+        <mapping class="ru.craftautoweb.entities.DocumentsEntity"/>
+        <mapping class="ru.craftautoweb.entities.BillDriversEntity"/>
+        <mapping class="ru.craftautoweb.entities.BillsEntity"/>
+        <mapping class="ru.craftautoweb.entities.TypesAgencyEntity"/>
+        <mapping class="ru.craftautoweb.entities.TypesCashEntity"/>
+        <mapping class="ru.craftautoweb.entities.VBillDetailsEntity"/>
+        <mapping class="ru.craftautoweb.entities.VBillDriverDetailsEntity"/>
+        <mapping class="ru.craftautoweb.entities.VOperatingStatementEntity"/>
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
